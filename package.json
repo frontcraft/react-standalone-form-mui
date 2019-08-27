@@ -1,0 +1,64 @@
+{
+  "name": "react-standalone-form-mui",
+  "version": "0.0.1",
+  "description": "The Material UI suite for react-standalone-form library.",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontcraft/react-standalone-form-mui"
+  },
+  "keywords": [
+    "form",
+    "forms",
+    "react",
+    "react-component",
+    "context",
+    "component",
+    "validation",
+    "formik",
+    "formstate",
+    "material-ui",
+    "mui",
+    "material"
+  ],
+  "author": "Michal Kokocinski <michal@kokocinski.me> (http://kokocinski.me)",
+  "license": "GPL-2.0",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.4"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.3.3",
+    "classnames": "^2.2.6",
+    "react-loading": "^2.0.3",
+    "react-standalone-form": "^0.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "react-dom": "^16.8.4",
+    "webpack-cli": "^3.2.3"
+  }
+}
