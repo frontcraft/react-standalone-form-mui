@@ -34,7 +34,6 @@ Checkbox.propTypes = {
   value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   required: PropTypes.bool,
   text: PropTypes.node,
-  small: PropTypes.bool,
   setValue: PropTypes.func.isRequired,
 }
 

@@ -16,8 +16,8 @@ const Checkbox = ({
 }) =>
   <FormGroup>
     {options && options.map((option, index) => {
-      const optionLabel = (typeof option === 'string') ? option : option.label
-      const optionValue = (typeof option === 'string') ? option : option.value
+      const optionLabel = typeof option === 'string' ? option : option.label
+      const optionValue = typeof option === 'string' ? option : option.value
       const checked = !!(value && value.includes(optionValue))
       return (
         <FormControlLabel
