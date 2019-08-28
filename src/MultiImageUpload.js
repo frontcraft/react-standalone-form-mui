@@ -36,7 +36,7 @@ const MultiImageUpload = ({
                 required
               )}
             >
-              <Delete fontSize="small" />
+              <Delete fontSize='small' />
             </IconButton>
           </Grid>
         </Grid>

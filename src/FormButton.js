@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '@material-ui/core'
-import ReactLoading from 'react-loading'
-import { withSubmit } from 'react-standalone-form'
+import { FormButton as CoreFormButton } from 'react-standalone-form'
 
 
 /**
@@ -13,37 +12,24 @@ const FormButton = ({
   component,
   reset,
   loading,
-  theme,
+  loadingComponent,
   children,
-  submit,
   ...otherProps
-}) => {
-  const Component = component
-  return (
-    <Component
-      {...otherProps}
-      onClick={e => submit(e, callback, reset)}
-      disabled={loading}
-    >
-      {loading &&
-        <React.Fragment>
-          <ReactLoading
-            type='spinningBubbles'
-            width={18}
-            height={18}
-            color='#ffffff'
-          />&nbsp;
-        </React.Fragment>
-      }
-      {children}
-    </Component>
-  )
-}
+}) =>
+  <CoreFormButton
+    component={component}
+    callback={fields => callback(fields)}
+    loading={loading}
+    loadingComponent={loadingComponent}
+    reset={reset}
+    {...otherProps}
+  >{children}</CoreFormButton>
 
 FormButton.propTypes = {
   callback: PropTypes.func,
   component: PropTypes.elementType,
   loading: PropTypes.bool,
+  loadingComponent: PropTypes.elementType,
   reset: PropTypes.bool,
   children: PropTypes.node.isRequired,
 }
@@ -52,4 +38,4 @@ FormButton.defaultProps = {
   component: Button,
 }
 
-export default withSubmit(FormButton)
+export default FormButton

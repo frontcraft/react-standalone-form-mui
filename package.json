@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react-loading": "^2.0.3"
+    "react-standalone-form": "^0.6.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
