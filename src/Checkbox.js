@@ -13,17 +13,21 @@ const Checkbox = ({
   text,
   required,
   setValue,
-}) =>
-  <FormControlLabel
-    control={
-      <MUICheckbox
-        checked={value}
-        onChange={e => setValue(name, e.target.checked, required)}
-      />
-    }
-    label={text}
-    key={name}
-  />
+}) => {
+  const safeValue = !!value
+  return (
+    <FormControlLabel
+      control={
+        <MUICheckbox
+          checked={safeValue}
+          onChange={e => setValue(name, e.target.checked, required)}
+        />
+      }
+      label={text}
+      key={name}
+    />
+  )
+}
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,

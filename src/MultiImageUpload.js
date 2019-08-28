@@ -89,7 +89,7 @@ const MultiImageUpload = ({
 export default withStyles(theme => ({
   wrapper: {
     backgroundColor: theme.palette.grey[100],
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     height: '33vw',
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
@@ -97,8 +97,8 @@ export default withStyles(theme => ({
     },
     [theme.breakpoints.up('md')]: {
       height: '12vw',
-      maxHeight: theme.spacing.unit * 30,
-    }
+      maxHeight: theme.spacing(30),
+    },
   },
   image: {
     maxWidth: '100%',

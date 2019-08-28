@@ -17,7 +17,7 @@ const Switch = ({
     <FormControlLabel control={
       <MUISwitch
         checked={safeValue}
-        size={small ? 'small' : 'normal'}
+        size={small ? 'small' : 'medium'}
         onChange={e => setValue(name, e.target.checked, required)}
         onClick={e => e.stopPropagation()}
       />
