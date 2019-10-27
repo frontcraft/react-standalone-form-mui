@@ -68,17 +68,21 @@ const withFormControl = InputComponent => ({
               })}
               disabled={disabled}
             >
-              {label && InputComponent.displayName && ['Checkbox', 'Radio', 'Wysiwyg']
-                .find(item => InputComponent.displayName.includes(item))
-                ? <Typography variant='h6'>{label}</Typography>
-                : label &&
-                  <InputLabel
-                    htmlFor={name}
-                    {...shrinkLabel}
-                  >{label}</InputLabel>
+              {label
+                ? InputComponent.displayName && ['Checkbox', 'Radio', 'Wysiwyg']
+                  .find(item => InputComponent.displayName.includes(item))
+                  ? <Typography variant='h6'>{label}</Typography>
+                  : label &&
+                    <InputLabel
+                      htmlFor={name}
+                      {...shrinkLabel}
+                    >{label}</InputLabel>
+                : null
               }
               <InputComponent {...inputProps} />
-              {help && <FormHelperText>{fieldsDataHelp || help}</FormHelperText>}
+              {(fieldsDataHelp || help) &&
+                <FormHelperText>{fieldsDataHelp || help}</FormHelperText>
+              }
             </MUIFormControl>
           </FormControlLogic>
         )
