@@ -4,7 +4,9 @@ import {
   Typography,
 } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import { CloudUpload, Clear, Movie } from '@material-ui/icons'
+import CloudUploadIcon from '@material-ui/icons/CloudUpload'
+import ClearIcon from '@material-ui/icons/Clear'
+import MovieIcon from '@material-ui/icons/Movie'
 import withFormControl from './FormControl'
 
 
@@ -41,7 +43,7 @@ const MediaUpload = ({
       />
       <label htmlFor={name} className={classes.imageUploadLabel}>
         <Button component='span' size='small'>
-          <CloudUpload />&nbsp;Upload image{type === 'media' && ' or video'}
+          <CloudUploadIcon />&nbsp;Upload image{type === 'media' && ' or video'}
         </Button>
       </label>
     </div>
@@ -56,14 +58,14 @@ const MediaUpload = ({
           className={classes.imageUploadImage}
           alt='Uploaded file'
         />
-        : <Movie className={classes.imageUploadIcon} />
+        : <MovieIcon className={classes.imageUploadIcon} />
       }
       <Typography variant='caption' gutterBottom>{value.name}</Typography>
       <Button
         component='span'
         size='small'
         onClick={() => setValue(name, '', required, type)}
-      ><Clear />&nbsp;Delete {value.type}</Button>
+      ><ClearIcon />&nbsp;Delete {value.type}</Button>
     </div>
 
 MediaUpload.defaultProps = {

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Grid, Typography, IconButton } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import { CloudUpload, Delete } from '@material-ui/icons'
+import CloudUploadIcon from '@material-ui/icons/CloudUpload'
+import DeleteIcon from '@material-ui/icons/Delete'
 import classNames from 'classnames'
 import withFormControl from './FormControl'
 
@@ -36,7 +37,7 @@ const MultiImageUpload = ({
                 required
               )}
             >
-              <Delete fontSize='small' />
+              <DeleteIcon fontSize='small' />
             </IconButton>
           </Grid>
         </Grid>
@@ -79,7 +80,7 @@ const MultiImageUpload = ({
         }}
       />
       <label htmlFor={name} className={classNames(classes.wrapper, classes.label)}>
-        <CloudUpload />
+        <CloudUploadIcon />
         <Typography variant='caption' color='inherit'>Add more</Typography>
       </label>
     </Grid>
