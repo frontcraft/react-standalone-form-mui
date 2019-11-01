@@ -1,5 +1,6 @@
 import React from 'react'
-import { FormControlLabel, Switch as MUISwitch } from '@material-ui/core'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import MUISwitch from '@material-ui/core/Switch'
 import withFormControl from './FormControl'
 
 

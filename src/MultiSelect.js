@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  Chip,
-  Input,
-  MenuItem,
-  Select,
-} from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles'
+import Chip from '@material-ui/core/Chip'
+import Input from '@material-ui/core/Input'
+import MenuItem from '@material-ui/core/MenuItem'
+import Select from '@material-ui/core/Select'
+import withStyles from '@material-ui/core/styles/withStyles'
 import withFormControl from './FormControl'
 
 

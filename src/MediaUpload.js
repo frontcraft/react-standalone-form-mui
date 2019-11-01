@@ -1,9 +1,7 @@
 import React from 'react'
-import {
-  Button,
-  Typography,
-} from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import withStyles from '@material-ui/core/styles/withStyles'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 import ClearIcon from '@material-ui/icons/Clear'
 import MovieIcon from '@material-ui/icons/Movie'

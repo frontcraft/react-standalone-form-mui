@@ -1,9 +1,7 @@
 import React from 'react'
-import {
-  RadioGroup,
-  FormControlLabel,
-  Radio as MUIRadio,
-} from '@material-ui/core'
+import RadioGroup from '@material-ui/core/RadioGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import MUIRadio from '@material-ui/core/Radio'
 import withFormControl from './FormControl'
 
 const Radio = ({

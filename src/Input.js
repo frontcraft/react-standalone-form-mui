@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  Input as MUIInput,
-  InputAdornment,
-} from '@material-ui/core'
+import MUIInput from '@material-ui/core/Input'
+import InputAdornment from '@material-ui/core/InputAdornment'
 import withFormControl from './FormControl'
 
 const Input = ({

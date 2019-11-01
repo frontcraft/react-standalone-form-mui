@@ -1,9 +1,7 @@
 import React from 'react'
-import {
-  FormGroup,
-  FormControlLabel,
-  Checkbox as MUICheckbox,
-} from '@material-ui/core'
+import FormGroup from '@material-ui/core/FormGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import MUICheckbox from '@material-ui/core/Checkbox'
 import withFormControl from './FormControl'
 import { checkboxHandler } from 'react-standalone-form'
 
