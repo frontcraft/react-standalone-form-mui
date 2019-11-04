@@ -15,11 +15,13 @@ const MultiImageUpload = ({
   required,
   setValue,
   classes,
+  spacing,
+  columns,
 }) =>
-  <Grid container spacing={8}>
+  <Grid container spacing={spacing}>
     {value &&
       value.map((item, index) =>
-        <Grid item sm={6} key={index}>
+        <Grid item sm={12 / columns} key={index}>
           <Grid
             container
             alignItems='center'
@@ -45,7 +47,7 @@ const MultiImageUpload = ({
         </Grid>
       )
     }
-    <Grid item sm={6}>
+    <Grid item sm={12 / columns}>
       <input
         accept='image/*'
         className={classes.input}
@@ -53,7 +55,7 @@ const MultiImageUpload = ({
         multiple
         type='file'
         onChange={e => {
-          let oldValue = value ? value : []
+          let oldValue = value || []
           Object.values(e.target.files).forEach(value => {
             const fileReader = new FileReader()
             const { name: fileName, type: fileType } = value
@@ -88,6 +90,12 @@ const MultiImageUpload = ({
     </Grid>
   </Grid>
 
+MultiImageUpload.defaultProps = {
+  spacing: 2,
+  columns: 2,
+  smHeight: '20vw',
+  mdHeight: '12vw',
+}
 
 export default withStyles(theme => ({
   wrapper: {
@@ -96,10 +104,10 @@ export default withStyles(theme => ({
     height: '33vw',
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
-      height: '20vw',
+      height: props => props.smHeight,
     },
     [theme.breakpoints.up('md')]: {
-      height: '12vw',
+      height: props => props.mdHeight,
       maxHeight: theme.spacing(30),
     },
   },
