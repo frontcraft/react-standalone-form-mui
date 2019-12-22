@@ -24,7 +24,7 @@ const Checkbox = ({
               checked={checked}
               onChange={() => {
                 const finalValue = checkboxHandler(!checked, optionValue, value)
-                setValue(name, finalValue, required, 'array')
+                setValue(name, finalValue, required)
               }}
               value={optionValue} />
           }

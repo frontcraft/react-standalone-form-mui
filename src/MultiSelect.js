@@ -19,7 +19,7 @@ const MultiSelect = ({
   <Select
     multiple
     value={value || []}
-    onChange={e => setValue(name, e.target.value, required, 'array')}
+    onChange={e => setValue(name, e.target.value, required)}
     input={<Input id={name} />}
     renderValue={selected =>
       <div className={classes.chips}>

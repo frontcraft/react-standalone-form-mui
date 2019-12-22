@@ -35,7 +35,7 @@ const MediaUpload = ({
               type: fileType.split('/')[0],
               data,
               dataFile,
-            }, required, type)
+            }, required, { type })
           }
         }}
       />
@@ -62,7 +62,7 @@ const MediaUpload = ({
       <Button
         component='span'
         size='small'
-        onClick={() => setValue(name, '', required, type)}
+        onClick={() => setValue(name, '', required, { type })}
       ><ClearIcon />&nbsp;Delete {value.type}</Button>
     </div>
 

@@ -23,7 +23,7 @@ const Input = ({
       const finalValue = (maxChars && e.target.value.length > maxChars)
         ? e.target.value.substring(0, maxChars)
         : e.target.value
-      setValue(name, finalValue, required, type)
+      setValue(name, finalValue, required, { type })
     }}
     value={value || ''}
     placeholder={placeholder}
@@ -44,22 +44,7 @@ Input.defaultProps = {
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
-  type: PropTypes.oneOf([
-    'text',
-    'email',
-    'password',
-    'url',
-    'tel',
-    'number',
-    'search',
-    'file',
-    'date',
-    'datetime-local',
-    'month',
-    'week',
-    'time',
-    'postcode',
-  ]),
+  type: PropTypes.string,
   value: PropTypes.any,
   required: PropTypes.bool,
   setValue: PropTypes.func.isRequired,
