@@ -94,6 +94,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: 220,
     maxWidth: `100%`,
+    display: 'flex',
     marginBottom: theme.spacing(7),
     [theme.breakpoints.up('sm')]: {
       width: 290,
