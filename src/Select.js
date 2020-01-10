@@ -36,10 +36,7 @@ Select.propTypes = {
   setValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.shape({
-      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      value: PropTypes.any,
-    }),
+    PropTypes.shape({ label: PropTypes.node, value: PropTypes.string }),
   ])),
 }
 
