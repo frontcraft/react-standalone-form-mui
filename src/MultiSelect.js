@@ -63,6 +63,6 @@ export default withFormControl(withStyles(theme => ({
     flexWrap: 'wrap',
   },
   chip: {
-    margin: theme.spacing(4),
+    margin: theme.spacing(1),
   },
 }))(MultiSelect))
