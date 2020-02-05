@@ -27,11 +27,12 @@ const Input = ({
     }}
     value={value || ''}
     placeholder={placeholder}
-    startAdornment={maxChars
+    startAdornment={addon || null}
+    endAdornment={maxChars
       ? <InputAdornment position='end'>
         {`${value ? value.length : 0}/${maxChars}`}
       </InputAdornment>
-      : addon || null
+      : null
     }
     disableUnderline={disableUnderline}
     multiline={multiline}
