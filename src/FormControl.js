@@ -22,6 +22,7 @@ const withFormControl = InputComponent => ({
   addon,
   narrow,
   large,
+  variant,
   noBottomGutter,
   fullWidth,
   disabled,
@@ -61,9 +62,10 @@ const withFormControl = InputComponent => ({
               error={(validation === 'error')}
               className={classNames(classes.root, {
                 [classes.noBottomGutter]: noBottomGutter,
-                [classes.fullWidth]: fullWidth,
                 [className]: className,
               })}
+              fullWidth={fullWidth}
+              variant={variant}
               disabled={disabled}
             >
               {label
@@ -92,22 +94,11 @@ const withFormControl = InputComponent => ({
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: 220,
     maxWidth: `100%`,
     display: 'flex',
-    marginBottom: theme.spacing(7),
-    [theme.breakpoints.up('sm')]: {
-      width: 290,
-    },
-    [theme.breakpoints.up('md')]: {
-      width: 315,
-    },
   },
   noBottomGutter: {
     marginBottom: 0,
-  },
-  fullWidth: {
-    width: '100%',
   },
 }))
 
