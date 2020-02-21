@@ -27,7 +27,10 @@ const Input = ({
     }}
     value={value || ''}
     placeholder={placeholder}
-    startAdornment={addon || null}
+    startAdornment={addon
+      ? <InputAdornment position='start'>{addon}</InputAdornment>
+      : null
+    }
     endAdornment={maxChars
       ? <InputAdornment position='end'>
         {`${value ? value.length : 0}/${maxChars}`}
