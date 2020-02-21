@@ -48,6 +48,7 @@ const withFormControl = InputComponent => ({
           required,
           type,
           setValue,
+          addon,
           ...otherProps,
         }
 
