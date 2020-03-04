@@ -2870,10 +2870,10 @@ react-loading@^2.0.3:
   resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-2.0.3.tgz#e8138fb0c3e4674e481b320802ac7048ae14ffb9"
   integrity sha512-Vdqy79zq+bpeWJqC+xjltUjuGApyoItPgL0vgVfcJHhqwU7bAMKzysfGW/ADu6i0z0JiOCRJjo+IkFNkRNbA3A==
 
-react-standalone-form@^0.10.2:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/react-standalone-form/-/react-standalone-form-0.10.2.tgz#0ce73a70bc357adf2766abefd7d9c5ec8578ca81"
-  integrity sha512-3LveIw9NkYXZVvEjMpTNYnW7hXrZp9BsJARCMXGSvf991h0SkvqESmHCl6TDPIE3WKb5veVRD5/6r6xf0i6/Aw==
+react-standalone-form@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/react-standalone-form/-/react-standalone-form-0.10.3.tgz#b8b00bd14bfacac9a74780195b53669628f22c45"
+  integrity sha512-FH1D7a6fmNfVsG0B/rfp4HIMMZ9rO1Q/fPhxx05aNbpqj7AagY42XS137TFFzHbzopqJguFCmnaVjTNNRMuQFw==
   dependencies:
     bem-modifiers "^1.0.7"
     polished "^3.0.3"
