@@ -8,16 +8,12 @@ const FormActions = ({ children, classes }) =>
 export default withStyles(theme => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      '& > * + *': {
-        marginLeft: theme.spacing(2),
-      },
+    justifyContent: 'flex-end',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    margin: -theme.spacing(2),
+    '& > *': {
+      margin: theme.spacing(2),
     },
   },
 
