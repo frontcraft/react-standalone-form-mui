@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MUISelect from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
-import ListItemIcon from '@material-ui/core/MenuItem'
-import Typography from '@material-ui/core/MenuItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import Typography from '@material-ui/core/Typography'
 import withFormControl from './FormControl'
 
 const Select = ({
