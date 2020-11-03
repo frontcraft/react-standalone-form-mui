@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MUISelect from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
+import ListItemIcon from '@material-ui/core/MenuItem'
+import Typography from '@material-ui/core/MenuItem'
 import withFormControl from './FormControl'
 
 const Select = ({
@@ -9,6 +11,7 @@ const Select = ({
   value,
   required,
   options = [],
+  placeholder,
   setValue,
 }) =>
   <MUISelect
@@ -20,18 +23,29 @@ const Select = ({
     }}
   >
     {!required &&
-      <MenuItem value=''><em>None</em></MenuItem>
+      <MenuItem value=''>
+        <em>{placeholder || (required ? 'Select' : 'All')}</em>
+      </MenuItem>
     }
     {options.map((item, index) =>
       typeof item === 'string'
         ? <MenuItem key={index} value={item}>{item}</MenuItem>
-        : <MenuItem key={index} value={item.value}>{item.label}</MenuItem>
+        : <MenuItem key={index} value={item.value}>
+          {item.icon
+            ? <>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <Typography variant='inherit'>{item.label}</Typography>
+            </>
+            : item.label
+          }
+        </MenuItem>
     )}
   </MUISelect>
 
 Select.propTypes = {
   name: PropTypes.any.isRequired,
   value: PropTypes.string,
+  placeholder: PropTypes.node,
   required: PropTypes.bool,
   setValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([

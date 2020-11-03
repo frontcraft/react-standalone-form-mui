@@ -23,15 +23,17 @@ const MultiSelect = ({
     input={<Input id={name} />}
     renderValue={selected =>
       <div className={classes.chips}>
-        {selected.map(item =>
-          typeof options[0] === 'string'
-            ? <Chip key={item} label={item} className={classes.chip} />
-            : <Chip
-              key={item}
-              label={options.filter(option => option.value === item)[0].label}
-              className={classes.chip}
-            />
-        )}
+        {selected.map(item => {
+          const selectedOption = options.find(option => option.value === item)
+          return <Chip
+            key={item}
+            label={typeof selectedOption === 'string'
+              ? item
+              : selectedOption.label
+            }
+            className={classes.chip}
+          />
+        })}
       </div>
     }
   >
